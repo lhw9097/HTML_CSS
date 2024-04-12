@@ -4,55 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
     <style>
-        .container {
-            width: 520px;
-            border: 1px solid black;
-            padding: 20px 40px;
+        body {
             margin: 0;
         }
-        .detail {
-            margin: 4px 40px;
+        .container {
+            width: 800px;
+            margin: 0 auto; /* 800px보다 커지면 auto. */
+        }
+        label {
+            width: 100px;
+            display: inline-block; /* 블록 벗어나면 인라인 요소(글자 크기만큼 울퉁불퉁) */
+        }
+        input {
+            width: 300px;
+            height: 24px;
+            margin-bottom: 10px;
+        }
+        input[type="date"] {
+            width: 150px;
+        }
+        span {
+            font-size: 80%; /* 상위 태그 (16px) 기준 */
+        }
+        button {
+            width: 150px;
+            height: 40px;
+            margin-left: 6px;
+            margin-right: 6px;
+        }
+        .btn {
+            margin-top: 20px;
+            display: flex; /* 수평 */
+            justify-content: center;
         }
     </style>
-</body>
+</head>
+<body>
     <div class="container">
-        <h1>프론트엔드 개발자 지원서</h1>
-        <p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다</p>
-        <hr>
+        <h1>아이패드 주문하기</h1>
         <form action="#">
-            <h4>개인 정보</h4>
-            <div class="detail">
-                <label for="name">이름</label>
-                <input type="text" id="name" id="name" placeholder="공백 없이 입력하세요"/>
-            </div>
-            <div class="detail">
-                <label for="tel">연락처</label>
-                <input type="tel" name="tel" id="tel">
-            </div>
-            <h4>지원 분야</h4>
-            <div class="detail">
+            <fieldset>
+                <legend>배송 정보</legend>
                 <div>
-                    <input type="radio" name="frontend" id="webpublishing" value="웹퍼블리싱">
-                    <label for="webpublishing">웹 퍼블리싱</label>
+                    <label for="orderitem">주문 상품</label>
+                    <input type="text" id="orderitem" value="아이패드 12.9인치" readonly />
                 </div>
                 <div>
-                    <input type="radio" name="frontend" id="webfrontend" value="웹프론트엔드">
-                    <label for="webfrontend">웹 프론트엔드</label>
+                    <label for="name">이름</label>
+                    <input type="text" id="name" autofocus />
                 </div>
                 <div>
-                    <input type="radio" name="frontend" id="mobileapp" value="모바일앱">
-                    <label for="mobileapp">모바일 앱</label>
+                    <label for="address">배송 주소</label>
+                    <input type="text" id="address" required />
                 </div>
+                <div>
+                    <label for="email">이메일</label>
+                    <input type="text" id="email" />
+                </div>
+                <div>
+                    <label for="phonenumber">연락처</label>
+                    <input type="number" id="phonenumber" placeholder="하이픈 빼고 입력해 주세요.(01012345678)"/>
+                </div>
+                <div>
+                    <label for="date">배송일 지정</label>
+                    <input type="date" id="date"><span>(주문일로부터 최소 3일 이후)</span>
+                </div>
+            </fieldset>
+            <div class="btn">
+                <button type="order">주문하기</button>
+                <button type="reset">취소하기</button>
             </div>
-            <h4>지원 동기</h4><br>
-            <br>
-            <textarea id="desc" cols="70" rows="5">
-            </textarea>
-            <input type="submit" value="접수하기">
-            <input type="reset" value="다시쓰기">
         </form>
     </div>
+</body>
 </html>

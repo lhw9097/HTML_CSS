@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* (직계)자식 선택자 : 부모 요소의 하위에 있는 자식 요소에 스타일 적용 */
+        .box > p { /* .box 바로 밑에 있는 p 태그 두 줄만 해당됨 */
+            color: red;
+        }
+        /* 후손 선택자 : 박스 밑의 p 태그 모두 선택됨
+        .box p {
+            color: blue;
+        } */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>안녕하세요</p>
+        <div>
+            <p>오늘은 여름 같은 봄날이에요</p>
+        </div>
+        <p>그래도 금요일이라서 좋아요 ^^</p>
+    </div>
+</body>
+</html>

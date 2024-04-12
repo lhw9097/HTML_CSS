@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="get">
+        <fieldset>
+            <legend>기본 정보</legend>
+            <div>
+                <label for="userid">아이디</label>
+                <input type="text" id="userid" value="jks2024" readonly />
+            </div>
+            <div>
+                <label for="pwd">패스워드</label>
+                <input type="password" id="pwd" required />
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>세부 정보</legend>
+            <div>
+                <label for="email">이메일</label>
+                <input type="text" id="email" placeholder="@를 넣어야 합니다" />
+            </div>
+            <div>
+                <label for="tel">전화번호</label>
+                <input type="number" id="tel" placeholder="하이픈을 넣지 마세요" />
+            </div>
+            <div>
+                <label for="age">나이</label>
+                <input type="number" id="age" />
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>주소 입력</legend>
+            <label for="city">도시</label>
+            <select name="city" id="city">
+                    <option value="강남구">강남구</option>
+                    <option value="강동구">강동구</option>
+                    <option value="강북구">강북구</option>
+                    <option value="관악구">관악구</option>
+                    <option value="금천구">금천구</option>
+                    <option value="노원구">노원구</option>
+                    <option value="동작구">동작구</option>
+                    <option value="서초구">서초구</option>
+                    <option value="영등포구">영등포구</option>
+                    <option value="용산구">용산구</option>
+                    <option value="중구">중구</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>성별</legend>
+            <p>
+            <label for="male">남성</label>
+            <input type="radio" name="gender" id="male" value="남자">
+            <label for="female">여성</label>
+            <input type="radio" name="gender" id="female" value="여자">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>직업</legend>
+            <p>
+            <label for="student">학생</label>
+            <input type="radio" name="job" id="student" value="학생">
+            <label for="employee">회사원</label>
+            <input type="radio" name="job" id="employee" value="회사원">
+            <label for="housemaker">주부</label>
+            <input type="radio" name="job" id="housemaker" value="주부">
+            <label for="jobless">무직</label>
+            <input type="radio" name="job" id="jobless" value="무직">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>취미를 선택하세요</legend>
+            <p>
+            <label for="exercise">운동</label>
+            <input type="radio" name="hobby" id="exercise" value="운동">
+            <label for="music">음악</label>
+            <input type="radio" name="hobby" id="music" value="음악">
+            <label for="picture">그림</label>
+            <input type="radio" name="hobby" id="picture" value="그림">
+            </p>
+        </fieldset>
+        <p>가입일 <input type="date"></p>
+        <label for="desc">소개글</label>
+        <p>
+        <textarea id="desc" cols="70" rows="5"></textarea>
+        </p>
+        <button type="submit">
+            <img src="./images/bear.png" width="30">제출</button>
+        <button type="reset">
+            <img src="./images/bear.png" width="30">초기화</button>
+    </form>
+</body>
+</html>
