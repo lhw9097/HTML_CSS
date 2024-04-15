@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 특징</title>
+    <style>
+        html {
+            font-size: 30px;
+        } /*
+        p {
+            color: red;
+        }
+        div {
+            color: orange;
+        } */
+        .parent {
+            font-size: 2vw;
+            color: rgb(255, 255, 255); /* 10진법. 별로 쓰이지 않음 */
+            background-color: rgba(0, 0, 0, 1); /* rgb+alpha. 알파값 0 투명, 1 불투명 */
+        }
+        .child {
+            font-size: 1.2em; /* 바로 위에 있는 부모를 1로 했을 때 20% 커짐 */
+            color: rgb(0, 100, 0);
+        }
+        .child-to-child {
+            font-size: 1.2rem; /* 최상위 부모(html. 1em = 16px)의 루트 기준(부모 기준 아님)으로 1.2배 */
+            color: #0000ff; /* 16진법. 많이 사용 */
+        }
+    </style>
+</head>
+<body>
+    <!-- <p>p 태그 색상
+        <div>
+            <span>부모의 컬러를 상속받음</span>
+        </div>
+    </p> -->
+    <div class="parent">
+        <p>부모의 폰트입니다</p>
+        <div class="child">
+            <p>자식의 폰트입니다</p>
+            <div class="child-to-child">
+                <p>자식의 자식 폰트입니다</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
