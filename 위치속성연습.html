@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        .container {
+            width: 300px;
+            background-color: royalblue;
+            position: relative; /* 부모가 relative값 가져야 자식들이 고정된 위치값 가질 수 있음 */
+            font-weight: bold;
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            border: 4px dashed red;
+        }
+        .item:nth-child(2) {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+        }
+        .item:nth-child(3) {
+            position: relative;
+        }
+        .item:nth-child(3):hover { /* 마우스 올리면 맨 위로 올라가며 색상 변경 */
+            z-index: 2;
+            background-color: orangered;
+            transition: all 1s ease-in; /* 시간 늘릴수록 느려짐 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+</body>
+</html>
