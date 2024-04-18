@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 템플릿</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        .grid-container {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 100px 1fr 1fr 1fr;
+            row-gap: 4px;
+            column-gap: 4px;
+            grid-template-areas:
+            "head-left head-center head-right"
+            "sidebar content content"
+            "foot-left foot-center foot-right"
+        }
+        .title {
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #head-left {
+            grid-area: head-left;
+            background-color: orange;
+        }
+        #head-center {
+            grid-area: head-center;
+            background-color: darkcyan;
+        }
+        #head-right {
+            grid-area: head-right;
+            background-color: darkkhaki;
+        }
+        #sidebar {
+            grid-area: sidebar;
+            background-color: aquamarine;
+        }
+        #content {
+            grid-area: content;
+            background-color: orangered;
+        }
+        #foot-left {
+            grid-area: foot-left;
+            background-color: cadetblue;
+        }
+        #foot-center {
+            grid-area: foot-center;
+            background-color: cornflowerblue;
+        }
+        #foot-right {
+            grid-area: foot-right;
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <p id="head-left" class="grid-item title">head-left</p>
+        <p id="head-center" class="grid-item title">head-center</p>
+        <p id="head-right" class="grid-item title">head-right</p>
+        <p id="sidebar" class="grid-item title">sidebar</p>
+        <p id="content" class="grid-item title">content</p>
+        <p id="foot-left" class="grid-item title">foot-left</p>
+        <p id="foot-center" class="grid-item title">foot-center</p>
+        <p id="foot-right" class="grid-item title">foot-right</p>
+    </div>
+</body>
+</html>
